@@ -11,6 +11,8 @@ def main():
     print ("----------------------------------------------------------------------------------")
     define_special_characters()
     print ("----------------------------------------------------------------------------------")
+    define_digits()
+    print ("----------------------------------------------------------------------------------")
 
 def define_password_length():
     min_password_length = int(input("Please eneter the minimum amount of characters for your password, as a number: "))
@@ -29,13 +31,23 @@ def define_password_length():
         return (min_password_length, max_password_length)
     
 def define_special_characters():
-    special_characters = (input("Would you like your password to contain special characters, yes or no: ")).lower()
-    if special_characters == "yes":
+    contains_special_characters = (input("Would you like your password to contain special characters, yes or no: ")).lower()
+    if contains_special_characters == "yes":
         print ("----------------------------------------------------------------------------------")
         print ("Your password will contain special characters.")
-        return (special_characters)
+        return (contains_special_characters)
     else:
         print ("----------------------------------------------------------------------------------")
         print ("Your password will not contain special characters.")
+
+def define_digits():
+    contains_digits = (input("Would you like your password to contain digits, yes or no: ")).lower()
+    if contains_digits == "yes":
+        print ("----------------------------------------------------------------------------------")
+        print ("Your password will contain digits.")
+        return (contains_digits)
+    else:
+        print ("----------------------------------------------------------------------------------")
+        print ("Your password will not contain digits.")
 
 main ()
