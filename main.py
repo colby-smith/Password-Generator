@@ -1,6 +1,5 @@
 import random
 import string
-import time
 
 PASSWORD_LETTERS = string.ascii_letters
 PASSWORD_DIGITS = string.digits
@@ -14,6 +13,7 @@ def main():
         print ("----------------------------------------------------------------------------------")
         response = input("Are you satisfied with this password? (yes/no): ").strip().lower()
         if response == "yes":
+            print ("----------------------------------------------------------------------------------")
             print("Great! Your password has been generated above.")
             break
         elif response == "no":
